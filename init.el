@@ -1,6 +1,6 @@
 (require 'package)
 (add-to-list 'package-archives
-         '("melpa" . "http://melpa.org/packages/") t)
+         '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/") t)
 
 (package-initialize)
 
