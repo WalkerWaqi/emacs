@@ -24,7 +24,9 @@
 (require 'setup-cedet)
 (require 'setup-editing)
 
-
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
 
 ;; function-args
 ;; (require 'function-args)
