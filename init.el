@@ -47,3 +47,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(unless (package-installed-p 'window-numbering)
+  (package-install 'window-numbering))
+(require 'window-numbering)
+(window-numbering-mode t)
+
+(unless (package-installed-p 'cmake-project)
+  (package-install 'cmake-project))
+(require 'cmake-project)
+(defun maybe-cmake-project-hook ()
+  (if (file-exists-p "CMakeLists.txt") (cmake-project-mode)))
+(add-hook 'c-mode-hook 'maybe-cmake-project-hook)
+(add-hook 'c++-mode-hook 'maybe-cmake-project-hook)
