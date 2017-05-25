@@ -79,3 +79,7 @@
 (add-hook 'c-mode-hook 'emr-initialize)
 (define-key c++-mode-map (kbd "M-RET") 'emr-show-refactor-menu)
 (add-hook 'c++-mode-hook 'emr-initialize)
+
+(unless (package-installed-p 'protobuf-mode)
+  (package-install 'protobuf-mode))
+(protobuf-mode t)
