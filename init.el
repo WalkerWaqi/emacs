@@ -75,6 +75,7 @@
 
 (unless (package-installed-p 'emr)
   (package-install 'emr))
+(require 'emr)
 (define-key c-mode-map (kbd "M-RET") 'emr-show-refactor-menu)
 (add-hook 'c-mode-hook 'emr-initialize)
 (define-key c++-mode-map (kbd "M-RET") 'emr-show-refactor-menu)
@@ -82,3 +83,12 @@
 
 (unless (package-installed-p 'protobuf-mode)
   (package-install 'protobuf-mode))
+(require 'protobuf-mode)
+
+(unless (package-installed-p 'multiple-cursors)
+  (package-install 'multiple-cursors))
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
