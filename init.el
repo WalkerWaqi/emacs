@@ -97,3 +97,8 @@
   (package-install 'autopair))
 (require 'autopair)
 (autopair-global-mode)
+
+(unless (package-installed-p 'function-args)
+  (package-install 'function-args))
+(require 'function-args)
+(fa-config-default)
