@@ -102,3 +102,5 @@
   (package-install 'function-args))
 (require 'function-args)
 (fa-config-default)
+
+(add-hook 'after-init-hook (lambda () (load-theme 'manoj-dark)))
