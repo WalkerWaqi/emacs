@@ -28,6 +28,16 @@
               tab-width 4
               indent-tabs-mode t)
 
+(blink-cursor-mode t)
+(setq-default cursor-type 'bar)
+
+(require 'hl-line)
+(global-hl-line-mode t)
+
+(setq require-final-newline t)
+
+(add-hook 'after-init-hook (lambda () (load-theme 'manoj-dark)))
+
 ;; function-args
 ;; (require 'function-args)
 ;; (fa-config-default)
@@ -102,5 +112,3 @@
   (package-install 'function-args))
 (require 'function-args)
 (fa-config-default)
-
-(add-hook 'after-init-hook (lambda () (load-theme 'manoj-dark)))
