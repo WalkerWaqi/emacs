@@ -63,6 +63,9 @@
 (require 'window-numbering)
 (window-numbering-mode t)
 
+(unless (package-installed-p 'cmake-mode)
+  (package-install 'cmake-mode))
+
 (unless (package-installed-p 'cmake-project)
   (package-install 'cmake-project))
 (require 'cmake-project)
