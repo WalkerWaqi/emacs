@@ -36,7 +36,8 @@
 
 (setq require-final-newline t)
 
-(add-hook 'after-init-hook (lambda () (load-theme 'manoj-dark)))
+(if (equal (display-graphic-p) nil)
+	(add-hook 'after-init-hook (lambda () (load-theme 'manoj-dark))))
 
 ;; function-args
 ;; (require 'function-args)
